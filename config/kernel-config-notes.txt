@@ -1,0 +1,24 @@
+# NeonBitOS Kernel Configuration Notes
+# Base: defconfig for x86_64
+# Modified options for minimal bootable system with graphics support
+
+# Start with: make defconfig
+# Then enable these options via: make menuconfig
+
+# === Graphics Support (Required for QEMU display) ===
+
+# Device Drivers -> Graphics support -> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support) ->
+#   [*] Enable legacy fbdev support for your modesetting driver
+
+# Device Drivers -> Graphics support -> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support) ->
+#   [*] DRM Support for bochs dispi vga interface (qemu stdvga)
+
+# Device Drivers -> Graphics support ->
+#   [*] Bootup logo
+
+# To apply this configuration:
+# 1. cd build/linux/
+# 2. make defconfig
+# 3. make menuconfig
+# 4. Navigate to the sections above and enable the marked options
+# 5. Save and exit

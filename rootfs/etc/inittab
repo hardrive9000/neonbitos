@@ -1,0 +1,14 @@
+# /etc/inittab for NeonBitOS
+# Format: <id>:<runlevels>:<action>:<process>
+
+# System initialization
+::sysinit:/etc/init.d/rcS
+
+# Launch shell directly (no login, minimal setup)
+::respawn:-/bin/sh --login
+
+# Restart init on ctrl+alt+del
+::ctrlaltdel:/sbin/reboot
+
+# Shutdown
+::shutdown:/bin/echo "NeonBitOS shutting down..."

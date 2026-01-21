@@ -1,0 +1,67 @@
+# NeonBitOS License
+
+## NeonBitOS Core (Public Domain)
+
+All original NeonBitOS code, scripts, and configuration files created for this project are released into the **Public Domain** under The Unlicense.
+
+This includes:
+- Build scripts
+- Configuration files
+- Custom applications (pidigits)
+- Documentation
+- System configuration (rcS, inittab, profile)
+
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+
+## Third-Party Components
+
+NeonBitOS includes or downloads the following third-party components during build:
+
+### Linux Kernel
+- License: GPL-2.0
+- Source: https://www.kernel.org/
+- Not redistributed in this repository
+
+### ToyBox
+- License: 0BSD (Public Domain equivalent)
+- Source: https://github.com/landley/toybox
+- Not redistributed in this repository
+
+### Termrex (Optional game)
+- License: MIT
+- Author: Satya Prakash Dahal
+- Source: https://github.com/SATYADAHAL/termrex
+- Not redistributed in this repository
+
+### Bash
+- License: GPL-3.0
+- Included from system libraries
+
+---
+
+## The Unlicense (for NeonBitOS original code)
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://unlicense.org>

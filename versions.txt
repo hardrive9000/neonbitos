@@ -1,0 +1,19 @@
+# NeonBitOS Component Versions
+# Update these variables to use different versions
+
+# Kernel
+KERNEL_VERSION=6.12.65
+KERNEL_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${KERNEL_VERSION}.tar.xz
+KERNEL_DIR=linux-${KERNEL_VERSION}
+
+# ToyBox (using Git for latest)
+TOYBOX_REPO=https://github.com/landley/toybox.git
+TOYBOX_BRANCH=master
+
+# Termrex (endless runner game - third party MIT license)
+TERMREX_REPO=https://github.com/SATYADAHAL/termrex.git
+TERMREX_BRANCH=main
+
+# Build configuration
+KBUILD_BUILD_USER=neonbit
+KBUILD_BUILD_HOST=neonbitos

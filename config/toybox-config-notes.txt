@@ -1,0 +1,26 @@
+# NeonBitOS ToyBox Configuration Notes
+# Base: defconfig
+# Additional commands enabled from pending commands
+
+# Start with: make defconfig
+# Then enable these options via: make menuconfig
+
+# === Pending (unfinished) commands ===
+# These commands are in development but functional enough for NeonBitOS
+
+# Pending (unfinished) commands ->
+#   [*] init
+
+# Pending (unfinished) commands ->
+#   [*] getty
+
+# Pending (unfinished) commands ->
+#   [*] vi
+
+# To apply this configuration:
+# 1. cd build/toybox/
+# 2. make defconfig
+# 3. make menuconfig
+# 4. Navigate to "Pending (unfinished) commands"
+# 5. Enable: init, getty, vi
+# 6. Save and exit

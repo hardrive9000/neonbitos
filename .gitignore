@@ -1,0 +1,34 @@
+# Build directories
+build/
+output/
+
+# Downloaded sources
+*.tar.xz
+*.tar.gz
+*.tar.bz2
+
+# Compiled files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Archives
+*.cpio
+*.img
+*.iso
+
+# Editor files
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db

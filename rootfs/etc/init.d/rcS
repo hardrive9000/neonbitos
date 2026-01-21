@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mount -t devtmpfs devtmpfs /dev
+mount -t sysfs /sys /sys
+mount -t proc /proc /proc
+
+# Reduce kernel log level (only show critical messages)
+dmesg -n 1
