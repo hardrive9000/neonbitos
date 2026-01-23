@@ -70,6 +70,10 @@ if [ -d "$CUSTOM_APPS_BUILD" ]; then
         cp "$CUSTOM_APPS_BUILD/pidigits" bin/
         echo "pidigits installed"
     fi
+    if [ -f "$CUSTOM_APPS_BUILD/ahorcado" ]; then
+        cp "$CUSTOM_APPS_BUILD/ahorcado" bin/
+        echo "ahorcado installed"
+    fi
     if [ -f "$CUSTOM_APPS_BUILD/termrex" ]; then
         cp "$CUSTOM_APPS_BUILD/termrex" bin/
         echo "termrex installed"
