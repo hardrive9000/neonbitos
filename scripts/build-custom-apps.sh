@@ -23,6 +23,14 @@ make
 cp pidigits "$BUILD_DIR/"
 echo "pidigits compiled"
 
+# Build ahorcado
+echo "Compiling ahorcado..."
+cd "$CUSTOM_APPS_DIR/ahorcado"
+make clean
+make
+cp ahorcado "$BUILD_DIR/"
+echo "ahorcado compiled"
+
 # Build termrex
 if [ -d "$TERMREX_SRC" ]; then
     echo "Compiling termrex (endless runner game)..."
