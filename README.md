@@ -107,8 +107,12 @@ neonbitos/
 │       ├── inittab                # Init configuration
 │       └── profile                # Shell profile with neon logo
 ├── custom-apps/
-│   └── pidigits/                  # BBP Pi calculator (public domain)
-│       ├── pidigits.c
+│   ├── pidigits/                  # BBP Pi calculator (public domain)
+│   │   ├── pidigits.c
+│   │   ├── Makefile
+│   │   └── README.md
+│   └── ahorcado/                  # Simple hangman game (public domain)
+│       ├── ahorcado.c
 │       ├── Makefile
 │       └── README.md
 ├── scripts/
@@ -116,7 +120,7 @@ neonbitos/
 │   ├── download-sources.sh        # Download kernel, ToyBox, termrex
 │   ├── build-kernel.sh            # Compile kernel
 │   ├── build-toybox.sh            # Compile ToyBox
-│   ├── build-custom-apps.sh       # Compile pidigits and termrex
+│   ├── build-custom-apps.sh       # Compile pidigits, hangman and termrex
 │   ├── create-rootfs.sh           # Build root filesystem
 │   ├── create-iso.sh              # Create bootable ISO
 │   └── run-qemu.sh                # Launch in QEMU
@@ -163,6 +167,13 @@ pidigits -n 1000000   # The millionth digit (instantly!)
 ```
 
 **Special feature**: Can calculate the nth digit without computing previous digits!
+
+### ahorcado - Simple Hangman Game in Spanish
+The game selects a random word and displays the word's category as a clue. You must guess it letter by letter. You have 6 attempts before losing.
+
+```bash
+ahorcado
+```
 
 ### termrex - Endless Runner Game
 A fun terminal-based endless runner game. Jump over obstacles and see how far you can go!
