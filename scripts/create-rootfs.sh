@@ -63,6 +63,24 @@ echo "inittab installed"
 cp "$(dirname "$WORK_DIR")/rootfs/etc/profile" etc/
 echo "profile installed"
 
+# Copy essential terminfo entries from host
+echo "Setting up terminfo..."
+if [ -f /usr/share/terminfo/l/linux ]; then
+    mkdir -p usr/share/terminfo/l
+    cp /usr/share/terminfo/l/linux usr/share/terminfo/l/
+    echo "linux terminal added"
+fi
+if [ -f /usr/share/terminfo/x/xterm ]; then
+    mkdir -p usr/share/terminfo/x
+    cp /usr/share/terminfo/x/xterm usr/share/terminfo/x/
+    echo "xterm terminal added"
+fi
+if [ -f /usr/share/terminfo/v/vt100 ]; then
+    mkdir -p usr/share/terminfo/v
+    cp /usr/share/terminfo/v/vt100 usr/share/terminfo/v/
+    echo "vt100 terminal added"
+fi
+
 # Install custom applications
 if [ -d "$CUSTOM_APPS_BUILD" ]; then
     echo "Installing custom applications..."
@@ -77,6 +95,10 @@ if [ -d "$CUSTOM_APPS_BUILD" ]; then
     if [ -f "$CUSTOM_APPS_BUILD/termrex" ]; then
         cp "$CUSTOM_APPS_BUILD/termrex" bin/
         echo "termrex installed"
+    fi
+    if [ -f "$CUSTOM_APPS_BUILD/nano" ]; then
+        cp "$CUSTOM_APPS_BUILD/nano" bin/
+        echo "nano installed"
     fi
 fi
 

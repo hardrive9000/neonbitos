@@ -1,5 +1,8 @@
 # /etc/profile - NeonBitOS shell configuration
 
+# Set terminal type
+export TERM=linux
+
 # Set custom prompt with colors
 export PS1="\[\e[36m\]neon\[\e[35m\]@\[\e[36m\]bit\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]# "
 
