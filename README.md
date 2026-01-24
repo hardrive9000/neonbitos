@@ -18,6 +18,7 @@ NeonBitOS is an ultra-minimal Linux distribution featuring:
 - 🔥 **Linux Kernel 6.12.65** with framebuffer graphics support
 - 🛠️ **ToyBox** as userspace (init, shell, and core utilities)
 - 🎮 **Termrex** - Endless runner game
+- 💀 **ahorcado** - Spanish hangman word game (test your vocabulary!)
 - 🔢 **pidigits** - Bailey-Borwein-Plouffe Pi calculator
 - ⚡ **Minimal footprint** - Only essential components
 - 🚀 **Fast boot** - Boots directly to a shell
