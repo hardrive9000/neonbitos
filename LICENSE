@@ -27,6 +27,11 @@ NeonBitOS includes or downloads the following third-party components during buil
 - Source: https://github.com/landley/toybox
 - Not redistributed in this repository
 
+### Nano
+- License: GPL-3.0
+- Source: https://www.nano-editor.org/
+- Not redistributed in this repository
+
 ### Termrex (Optional game)
 - License: MIT
 - Author: Satya Prakash Dahal

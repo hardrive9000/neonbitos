@@ -5,6 +5,7 @@ set -e
 
 WORK_DIR="$(pwd)/build"
 TOYBOX_SRC="$WORK_DIR/toybox"
+NANO_SRC="$WORK_DIR/nano"
 ROOTFS_DIR="$WORK_DIR/rootfs"
 OUTPUT_DIR="$(pwd)/output"
 CUSTOM_APPS_BUILD="$WORK_DIR/custom-apps-build"
@@ -81,6 +82,13 @@ if [ -f /usr/share/terminfo/v/vt100 ]; then
     echo "vt100 terminal added"
 fi
 
+# Install nano
+if [ -f "$NANO_SRC/src/nano" ]; then
+    echo "Installing nano..."
+    cp "$NANO_SRC/src/nano" bin/
+    echo "nano installed"
+fi
+
 # Install custom applications
 if [ -d "$CUSTOM_APPS_BUILD" ]; then
     echo "Installing custom applications..."
@@ -95,10 +103,6 @@ if [ -d "$CUSTOM_APPS_BUILD" ]; then
     if [ -f "$CUSTOM_APPS_BUILD/termrex" ]; then
         cp "$CUSTOM_APPS_BUILD/termrex" bin/
         echo "termrex installed"
-    fi
-    if [ -f "$CUSTOM_APPS_BUILD/nano" ]; then
-        cp "$CUSTOM_APPS_BUILD/nano" bin/
-        echo "nano installed"
     fi
 fi
 
