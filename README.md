@@ -20,6 +20,7 @@ NeonBitOS is an ultra-minimal Linux distribution featuring:
 - 🎮 **Termrex** - Endless runner game
 - 💀 **ahorcado** - Spanish hangman word game (test your vocabulary!)
 - 🔢 **pidigits** - Bailey-Borwein-Plouffe Pi calculator
+- 📝 **nano** - User-friendly text editor
 - ⚡ **Minimal footprint** - Only essential components
 - 🚀 **Fast boot** - Boots directly to a shell
 - 💾 **Fully reproducible** - Built entirely from source
@@ -47,12 +48,13 @@ NeonBitOS demonstrates the bare minimum required for a bootable Linux system. It
 
 This will:
 1. Install all required dependencies
-2. Download Linux kernel, ToyBox, and Termrex sources
+2. Download Linux kernel, ToyBox, Nano, and Termrex sources
 3. Configure and compile the kernel (with interactive menuconfig)
 4. Configure and compile ToyBox (with interactive menuconfig)
-5. Compile custom applications (pidigits, termrex)
-6. Create the root filesystem and initramfs
-7. Generate bootable ISO
+5. Configure and compile Nano (some features disabled to reduce size)
+6. Compile custom applications (pidigits, ahorcado, termrex)
+7. Create the root filesystem and initramfs
+8. Generate bootable ISO
 
 ### Run NeonBitOS:
 ```bash
@@ -80,16 +82,19 @@ If you prefer step-by-step control:
 # 4. Build ToyBox
 ./scripts/build-toybox.sh
 
-# 5. Build custom apps
+# 5. Build Nano
+./scripts/build-nano.sh
+
+# 6. Build custom apps
 ./scripts/build-custom-apps.sh
 
-# 6. Create filesystem
+# 7. Create filesystem
 ./scripts/create-rootfs.sh
 
-# 7. Create ISO
+# 8. Create ISO
 ./scripts/create-iso.sh
 
-# 8. Run in QEMU
+# 9. Run in QEMU
 ./scripts/run-qemu.sh
 ```
 
@@ -118,9 +123,10 @@ neonbitos/
 │       └── README.md
 ├── scripts/
 │   ├── install-deps.sh            # Install build dependencies
-│   ├── download-sources.sh        # Download kernel, ToyBox, termrex
+│   ├── download-sources.sh        # Download kernel, ToyBox, Nano, termrex
 │   ├── build-kernel.sh            # Compile kernel
 │   ├── build-toybox.sh            # Compile ToyBox
+│   ├── build-nano.sh              # Compile Nano
 │   ├── build-custom-apps.sh       # Compile pidigits, hangman and termrex
 │   ├── create-rootfs.sh           # Build root filesystem
 │   ├── create-iso.sh              # Create bootable ISO
@@ -256,8 +262,10 @@ Contributions are welcome! Some ideas:
 - **NeonBitOS original code**: Public Domain (The Unlicense)
 - **Linux kernel**: GPL-2.0
 - **ToyBox**: 0BSD
+- **Nano**: GPL-3.0
 - **Termrex**: MIT
 - **pidigits**: Public Domain
+- **ahorcado**: Public Domain
 
 See [LICENSE](LICENSE) for details.
 

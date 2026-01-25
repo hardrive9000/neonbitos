@@ -24,6 +24,18 @@ else
     echo "Kernel already downloaded"
 fi
 
+# Download nano
+if [ ! -d "nano" ]; then
+    echo "Downloading nano ${NANO_VERSION}..."
+    wget -q --show-progress "$NANO_URL"
+    tar xf "nano-${NANO_VERSION}.tar.xz"
+    rm "nano-${NANO_VERSION}.tar.xz"
+    mv "$NANO_DIR" nano
+    echo "nano downloaded"
+else
+    echo "nano already downloaded"
+fi
+
 # Clone ToyBox
 if [ ! -d "toybox" ]; then
     echo "Cloning ToyBox..."
