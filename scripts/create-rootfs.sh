@@ -70,16 +70,22 @@ if [ -f /usr/share/terminfo/l/linux ]; then
     mkdir -p usr/share/terminfo/l
     cp /usr/share/terminfo/l/linux usr/share/terminfo/l/
     echo "linux terminal added"
+else
+    echo "linux terminal not found"
 fi
 if [ -f /usr/share/terminfo/x/xterm ]; then
     mkdir -p usr/share/terminfo/x
     cp /usr/share/terminfo/x/xterm usr/share/terminfo/x/
     echo "xterm terminal added"
+else
+    echo "xterm terminal not found"
 fi
 if [ -f /usr/share/terminfo/v/vt100 ]; then
     mkdir -p usr/share/terminfo/v
     cp /usr/share/terminfo/v/vt100 usr/share/terminfo/v/
     echo "vt100 terminal added"
+else
+    echo "vt100 terminal not found"
 fi
 
 # Install nano
@@ -87,6 +93,8 @@ if [ -f "$NANO_SRC/src/nano" ]; then
     echo "Installing nano..."
     cp "$NANO_SRC/src/nano" bin/
     echo "nano installed"
+else
+    echo "nano not found"
 fi
 
 # Install custom applications
@@ -95,14 +103,20 @@ if [ -d "$CUSTOM_APPS_BUILD" ]; then
     if [ -f "$CUSTOM_APPS_BUILD/pidigits" ]; then
         cp "$CUSTOM_APPS_BUILD/pidigits" bin/
         echo "pidigits installed"
+    else
+        echo "pidigits not found"
     fi
     if [ -f "$CUSTOM_APPS_BUILD/ahorcado" ]; then
         cp "$CUSTOM_APPS_BUILD/ahorcado" bin/
         echo "ahorcado installed"
+    else
+        echo "ahorcado not found"
     fi
     if [ -f "$CUSTOM_APPS_BUILD/termrex" ]; then
         cp "$CUSTOM_APPS_BUILD/termrex" bin/
         echo "termrex installed"
+    else
+        echo "termrex not found"
     fi
 fi
 
