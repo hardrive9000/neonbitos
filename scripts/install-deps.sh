@@ -19,6 +19,7 @@ sudo apt install -y \
     cpio \
     libelf-dev \
     libssl-dev \
+    texinfo \
     qemu-system-x86 \
     genisoimage \
     syslinux \

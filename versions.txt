@@ -14,6 +14,13 @@ TOYBOX_BRANCH=master
 TERMREX_REPO=https://github.com/SATYADAHAL/termrex.git
 TERMREX_BRANCH=main
 
+# nano (text editor)
+NANO_VERSION=8.7
+NANO_URL=https://www.nano-editor.org/dist/v8/nano-${NANO_VERSION}.tar.xz
+NANO_DIR=nano-${NANO_VERSION}
+
 # Build configuration
 KBUILD_BUILD_USER=neonbit
 KBUILD_BUILD_HOST=neonbitos
+LANG=C
+LC_ALL=C

@@ -28,6 +28,10 @@ echo ""
 echo ""
 ./scripts/build-toybox.sh
 
+# Build Nano
+echo ""
+./scripts/build-nano.sh
+
 # Build custom applications
 echo ""
 ./scripts/build-custom-apps.sh

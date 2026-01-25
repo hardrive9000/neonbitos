@@ -37,6 +37,7 @@ if [ -d "$TERMREX_SRC" ]; then
     cd "$TERMREX_SRC"
     make clean || true
     make CXX=g++ CXXFLAGS="-std=c++17 -Wall -Wextra -static-libstdc++ -static-libgcc -O2" release
+    echo "Size: $(du -h build/termrex | cut -f1)"
     cp build/termrex "$BUILD_DIR/"
     echo "termrex compiled"
 else
