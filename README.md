@@ -21,6 +21,7 @@ NeonBitOS is an ultra-minimal Linux distribution featuring:
 - 💀 **ahorcado** - Spanish hangman word game (test your vocabulary!)
 - 🔢 **pidigits** - Bailey-Borwein-Plouffe Pi calculator
 - 📝 **nano** - User-friendly text editor
+- 🔍 **strace** - System call tracer for debugging
 - ⚡ **Minimal footprint** - Only essential components
 - 🚀 **Fast boot** - Boots directly to a shell
 - 💾 **Fully reproducible** - Built entirely from source
@@ -48,13 +49,14 @@ NeonBitOS demonstrates the bare minimum required for a bootable Linux system. It
 
 This will:
 1. Install all required dependencies
-2. Download Linux kernel, ToyBox, Nano, and Termrex sources
+2. Download Linux kernel, ToyBox, Nano, strace, and Termrex sources
 3. Configure and compile the kernel (with interactive menuconfig)
 4. Configure and compile ToyBox (with interactive menuconfig)
 5. Configure and compile Nano (some features disabled to reduce size)
-6. Compile custom applications (pidigits, ahorcado, termrex)
-7. Create the root filesystem and initramfs
-8. Generate bootable ISO
+6. Configure and compile strace (static build)
+7. Compile custom applications (pidigits, ahorcado, termrex)
+8. Create the root filesystem and initramfs
+9. Generate bootable ISO
 
 ### Run NeonBitOS:
 ```bash
@@ -85,16 +87,19 @@ If you prefer step-by-step control:
 # 5. Build Nano
 ./scripts/build-nano.sh
 
-# 6. Build custom apps
+# 6. Build strace
+./scripts/build-strace.sh
+
+# 7. Build custom apps
 ./scripts/build-custom-apps.sh
 
-# 7. Create filesystem
+# 8. Create filesystem
 ./scripts/create-rootfs.sh
 
-# 8. Create ISO
+# 9. Create ISO
 ./scripts/create-iso.sh
 
-# 9. Run in QEMU
+# 10. Run in QEMU
 ./scripts/run-qemu.sh
 ```
 
@@ -123,10 +128,11 @@ neonbitos/
 │       └── README.md
 ├── scripts/
 │   ├── install-deps.sh            # Install build dependencies
-│   ├── download-sources.sh        # Download kernel, ToyBox, Nano, termrex
+│   ├── download-sources.sh        # Download kernel, ToyBox, Nano, strace, termrex
 │   ├── build-kernel.sh            # Compile kernel
 │   ├── build-toybox.sh            # Compile ToyBox
 │   ├── build-nano.sh              # Compile Nano
+│   ├── build-strace.sh            # Compile strace
 │   ├── build-custom-apps.sh       # Compile pidigits, hangman and termrex
 │   ├── create-rootfs.sh           # Build root filesystem
 │   ├── create-iso.sh              # Create bootable ISO
@@ -263,6 +269,7 @@ Contributions are welcome! Some ideas:
 - **Linux kernel**: GPL-2.0
 - **ToyBox**: 0BSD
 - **Nano**: GPL-3.0
+- **strace**: LGPL-2.1
 - **Termrex**: MIT
 - **pidigits**: Public Domain
 - **ahorcado**: Public Domain

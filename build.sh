@@ -32,6 +32,10 @@ echo ""
 echo ""
 ./scripts/build-nano.sh
 
+# Build strace
+echo ""
+./scripts/build-strace.sh
+
 # Build custom applications
 echo ""
 ./scripts/build-custom-apps.sh
