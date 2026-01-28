@@ -36,6 +36,18 @@ else
     echo "nano already downloaded"
 fi
 
+# Download strace
+if [ ! -d "strace" ]; then
+    echo "Downloading strace ${STRACE_VERSION}..."
+    wget -q --show-progress "$STRACE_URL"
+    tar xf "strace-${STRACE_VERSION}.tar.xz"
+    rm "strace-${STRACE_VERSION}.tar.xz"
+    mv "$STRACE_DIR" strace
+    echo "strace downloaded"
+else
+    echo "strace already downloaded"
+fi
+
 # Clone ToyBox
 if [ ! -d "toybox" ]; then
     echo "Cloning ToyBox..."

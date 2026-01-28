@@ -6,6 +6,7 @@ set -e
 WORK_DIR="$(pwd)/build"
 TOYBOX_SRC="$WORK_DIR/toybox"
 NANO_SRC="$WORK_DIR/nano"
+STRACE_SRC="$WORK_DIR/strace"
 ROOTFS_DIR="$WORK_DIR/rootfs"
 OUTPUT_DIR="$(pwd)/output"
 CUSTOM_APPS_BUILD="$WORK_DIR/custom-apps-build"
@@ -95,6 +96,15 @@ if [ -f "$NANO_SRC/src/nano" ]; then
     echo "nano installed"
 else
     echo "nano not found"
+fi
+
+# Install strace
+if [ -f "$STRACE_SRC/src/strace" ]; then
+    echo "Installing strace..."
+    cp "$STRACE_SRC/src/strace" bin/
+    echo "strace installed"
+else
+    echo "strace not found"
 fi
 
 # Install custom applications

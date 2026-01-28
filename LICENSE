@@ -32,6 +32,11 @@ NeonBitOS includes or downloads the following third-party components during buil
 - Source: https://www.nano-editor.org/
 - Not redistributed in this repository
 
+### strace
+- License: LGPL-2.1
+- Source: https://github.com/strace/strace
+- Not redistributed in this repository
+
 ### Termrex (Optional game)
 - License: MIT
 - Author: Satya Prakash Dahal
